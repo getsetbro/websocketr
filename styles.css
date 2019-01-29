@@ -1,0 +1,113 @@
+:root {
+  --bg-color: #061b2b;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body * {
+  box-sizing: border-box;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: auto auto;
+  grid-gap: 1px;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 12px;
+  background-color: white;
+  padding: 0 12px;
+}
+.nav-item {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.active {
+  background-color: var(--bg-color);
+  color: white;
+}
+.nav-item:not(.active):hover {
+  cursor: pointer;
+  background-color: #aaa;
+}
+
+aside.a2 {
+  background-color: #222;
+  grid-column: 1 / span 5;
+  grid-row: 1 / span 2;
+}
+
+section.table {
+  color: white;
+  padding: 12px;
+}
+
+.overscroll {
+  height: calc(100vh - 100px);
+  overflow-y: scroll;
+}
+
+aside.a2 table {
+  border: 1px solid white;
+}
+aside.a2 table td {
+  padding: 5px;
+}
+
+aside.a2 table tr.active {
+  background-color: #00bcd4;
+  color: black;
+}
+
+section#i1 {
+  grid-column: 6 / span 7;
+  grid-row: 1;
+  text-align: center;
+  font-size: 0;
+  border-radius: 20px 20px 0 0;
+  background-color: var(--bg-color);
+  padding-top: 4px;
+}
+section#i1 img {
+  height: 460px;
+  max-width: 100%;
+}
+
+aside.a1 {
+  color: white;
+  grid-column: 13 / span 3;
+  grid-row: 1;
+  padding: 1em;
+  border-radius: 20px 0 0 0;
+  background-color: #222;
+}
+
+section#i2 {
+  grid-column: 6 / span 10;
+  grid-row: 2;
+  font-size: 0;
+  text-align: center;
+  background-color: var(--bg-color);
+  border-radius: 0;
+  padding-top: 4px;
+}
+section#i2 img {
+  width: 45%;
+  max-width: 100%;
+}
+
+label {
+  font-weight: bold;
+}
+img {
+  border: 1px solid var(--bg-color);
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEhEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP7/AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app" class="grid">
+      <aside class="a1">
+        <strong>INFO:</strong> <br />
+        <br />
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <br />
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <br />
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <br />
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <br />
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+        <div>
+          <label>label: </label><span>{{ items[tr].name }}</span>
+        </div>
+      </aside>
+      <section class="" id="i1"><img src="./img/fpo.png" alt="" /></section>
+      <section class="" id="i2">
+        <img src="./img/fpo.png" alt="" /> <img src="./img/fpo.png" alt="" />
+      </section>
+      <aside class="a2">
+        <nav>
+          <div
+            class="nav-item"
+            v-bind:class="{ active: nav === 1 }"
+            v-on:click="nav = 1"
+          >
+            <span>Home</span>
+          </div>
+          <div
+            class="nav-item"
+            v-bind:class="{ active: nav === 2 }"
+            v-on:click="nav = 2"
+          >
+            <span>History</span>
+          </div>
+        </nav>
+        <section class="table">
+          <strong>RECORDS:</strong> <br />
+          <br />
+          <div class="overscroll">
+            <table width="100%" border="1" style="border-collapse:collapse">
+              <tr
+                v-for="(item, index) in items"
+                v-bind:class="{ active: tr === index }"
+                v-on:click="tr = index"
+              >
+                <td>{{ item.name }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.name }}</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+      </aside>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.min.js"
+      integrity="sha256-628YJ33SSNGwa+a/S3mx27+nZrFkawJZt/CC/REfBPk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
